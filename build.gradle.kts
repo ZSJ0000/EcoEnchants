@@ -1,4 +1,4 @@
-﻿import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     kotlin("jvm") version "2.3.0"
@@ -120,10 +120,6 @@ allprojects {
         shadowJar {
             exclude("META-INF/**")
             relocate("com.willfp.libreforge.loader", "com.willfp.ecoenchants.libreforge.loader")
-            relocate("kotlin", "com.willfp.eco.libs.kotlin")
-            relocate("kotlin.jvm", "com.willfp.eco.libs.kotlin.jvm")
-            relocate("kotlin.coroutines", "com.willfp.eco.libs.kotlin.coroutines")
-            relocate("kotlin.reflect", "com.willfp.eco.libs.kotlin.reflect")
         }
 
         compileKotlin {
